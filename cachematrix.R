@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These two functions allow user to create an invertible matrix
+## and cache it rather than compute it again.
 
-## Write a short comment describing this function
+## makeCacheMatrix 
 
 makeCacheMatrix <- function(x = matrix()) {
   inv_mat <- NULL
