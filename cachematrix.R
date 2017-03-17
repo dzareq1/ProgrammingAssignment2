@@ -1,8 +1,8 @@
 ## These two functions allow user to create an invertible matrix
 ## and cache it rather than compute it again.
 
-## makeCacheMatrix 
-
+## makeCacheMatrix provides list of functions that allow to store the inverse of the matrix
+## which is created by cacheSolve.
 makeCacheMatrix <- function(x = matrix()) {
   inv_mat <- NULL
   set <- function(y) {
@@ -17,8 +17,9 @@ makeCacheMatrix <- function(x = matrix()) {
        get_inv_mat = get_inv_mat)
 }
 
-## Write a short comment describing this function
-
+## cacheSolve function firstly checks if inverse of the matrix has been already calculated.
+## If yes, it takes inverse of matrix from cache.   
+## If no, it computes inverse of the matrix using solve() function. 
 cacheSolve <- function(x, ...) {
   inv_mat <- x$get_inv_mat()
   if(!is.null(inv_mat)) {
