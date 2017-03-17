@@ -36,3 +36,29 @@ cacheSolve <- function(x, ...) {
 }
        
 
+## Sample run:
+    
+## > x <- diag(3,3,3)  
+## > x
+##      [,1] [,2] [,3]
+## [1,]    3    0    0
+## [2,]    0    3    0
+## [3,]    0    0    3 
+
+## > z = makeCacheMatrix(x)
+## > cacheSolve(z)
+##          [,1]      [,2]      [,3]
+## [1,] 0.3333333 0.0000000 0.0000000
+## [2,] 0.0000000 0.3333333 0.0000000
+## [3,] 0.0000000 0.0000000 0.3333333
+
+## > This is first use of diagonal matrix x. Hence, cacheSolve computes inverse of the matrix x.
+    
+## > cacheSolve(z)
+## getting cached data
+##           [,1]      [,2]      [,3]
+## [1,] 0.3333333 0.0000000 0.0000000
+## [2,] 0.0000000 0.3333333 0.0000000
+## [3,] 0.0000000 0.0000000 0.3333333
+    
+## > As we tried to compute inverse of the matrix x again, the result was loaded from the ceche without computations.
